@@ -6,7 +6,7 @@ RUN apt-get update
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get install -yq wget curl
-RUN wget --content-disposition "http://www.opscode.com/chef/download-server?p=ubuntu&pv=12.04&m=x86_64&v=latest&prerelease=false&nightlies=false"
+RUN wget --content-disposition "http://www.opscode.com/chef/download-server?p=ubuntu&pv=14.04&m=x86_64&v=latest&prerelease=false&nightlies=false"
 RUN dpkg -i chef-server*.deb
 
 RUN dpkg-divert --local --rename --add /sbin/initctl
